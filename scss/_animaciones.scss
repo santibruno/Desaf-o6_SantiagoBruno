@@ -1,0 +1,41 @@
+/*Animacion*/
+
+.cajaAnimada{
+    animation-name: caja;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    
+}
+.tituloAnimado{
+    animation-name: titulo;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    /*MINIMO ↑*/
+
+}
+/*KeyFrames*/
+@keyframes titulo{
+    from /*inicio*/{
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+    to /*Final*/{
+        transform: translate(0);
+        opacity: 100;
+    }
+
+}
+
+
+@keyframes caja{
+    0%/*inicio*/{
+        border-radius: 50%;
+        transform: skewX(30deg);
+    }
+    50%{
+        transform: rotateY(45deg);
+    }
+    100%/*Final*/{
+        border-radius: 50%;
+    }
+}
